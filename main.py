@@ -6,7 +6,7 @@ DB_PATH = "geo.db"
 mcp = FastMCP("Kalo's MCP")
 
 @mcp.tool
-def get_points():
+def get_points() -> str:
     """Return all saved points of interest with name, coordinates, and category."""
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
